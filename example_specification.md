@@ -1,9 +1,20 @@
 # **Example Project Specification: Course Management System**
-***Warning: This was AI-generated from the specification guidelines and instructor input. The instructor and course staff reviewed this document to ensure 
-consistency with the expected team output and alignment with the project specification. This document is an EXAMPLE of what we expect your team to create using your
-brains. AI produces slop, and this document may not actually make technical sense. We expect yours to be a thoughtful, engineered, team-created design of your
-proposed application.***
 
+---
+
+**ACADEMIC INTEGRITY NOTICE:**
+This example document was AI-generated and reviewed by the instructor and course staff solely as a formatting and structural template. The technical content may contain errors, inconsistencies, or nonsensical design choices because AI cannot reason about system architecture the way engineers do. **YOUR PROJECT PROPOSAL MUST BE YOUR OWN WORK.** This means:
+
+- DO NOT use AI tools to generate your system design, database schema, or technical specifications
+- DO NOT trust AI-generated architecture - it frequently produces designs that look plausible but are technically flawed, poorly integrated, or unnecessarily complex
+- DO use your team's collective engineering judgment to design a system that makes sense for your specific application
+- DO think critically about the relationships between your features, the structure of your database, and the requirements of your users
+
+AI-generated content is easily identifiable and will be treated as academic dishonesty. We expect thoughtful, team-created designs that demonstrate genuine understanding of web application architecture, not generic templates filled with buzzwords.
+
+Your proposal must reflect original thinking, deliberate design choices, and your team's reasoned approach to solving your application's specific requirements. If you cannot explain and defend every technical decision in your specification, it is not ready for submission.
+
+---
 ## **1.0 Project Overview**
 
 The **Course Management System (CMS)** is a web-based platform designed to facilitate online course delivery and management for 
@@ -41,10 +52,11 @@ RESTful API endpoints for all major operations.
 - Students can only view courses they're enrolled in
 - Instructors can only edit courses they created
 - Administrators have full access to all resources
-- Unauthenticated users can only view public course catalog
+- Unauthenticated users can only view the public course catalog
 
 **Security Considerations:**
 - Strong password requirements (minimum 8 characters, mixed case, numbers)
+- Use of REGEX for validating the password rules
 - Protection against SQL injection via ActiveRecord parameterization
 - CSRF token validation on all state-changing requests
 - Session timeout after 2 hours of inactivity
@@ -105,15 +117,17 @@ RESTful API endpoints for all major operations.
 
 **Schema Completeness:**
 
-The database consists of 9 normalized tables that eliminate data redundancy and establish clear relationships between entities:
+The database consists of 9 normalized tables that eliminate data redundancy and establish clear relationships between entities. Selected, commonly used fields are indexed  for peformant lookups in read-heavy workflows, e.g, index on first name and last name since instructors may frequently look up specific students
 
 1. **users** - Stores user account information
    - Primary key: id
+   - Indexed fields: email, first_name, last_name
    - Fields: email (unique), encrypted_password, role (enum: student/instructor/admin), first_name, last_name, created_at, updated_at
 
 2. **courses** - Stores course information
    - Primary key: id
    - Foreign key: instructor_id (references users)
+   - Indexed fields: title
    - Fields: title, description, syllabus (text), published (boolean), max_enrollment, created_at, updated_at
 
 3. **enrollments** - Join table for many-to-many relationship between users and courses
@@ -125,6 +139,7 @@ The database consists of 9 normalized tables that eliminate data redundancy and 
 4. **modules** - Stores course content modules
    - Primary key: id
    - Foreign key: course_id (references courses)
+   - Indexed fields: title
    - Fields: title, description, order_position, created_at, updated_at
 
 5. **assignments** - Stores assignment details
@@ -205,7 +220,7 @@ The `submissions` table connects students to assignments with a unique constrain
   - Password encryption and reset functionality
   - Role-based authorization checks
 - **User-Facing Capabilities:**
-  - Create account and choose role
+  - Create an account and choose a role
   - Log in and out securely
   - Reset forgotten password via email
   - Update profile information
@@ -216,14 +231,14 @@ The `submissions` table connects students to assignments with a unique constrain
 - **Views:** courses/index (browse catalog), courses/show (course detail), enrollments/index (my courses)
 - **Core Functionality:**
   - Browse published courses with filtering by category
-  - View course details including instructor and syllabus
+  - View course details, including instructor and syllabus
   - Enroll in available courses with capacity checks
   - Track enrollment status and manage course list
 - **User-Facing Capabilities:**
-  - Search and filter course catalog
+  - Search and filter the course catalog
   - View course descriptions and prerequisites
   - Enroll in or drop courses
-  - See list of enrolled courses
+  - See the list of enrolled courses
 
 **3. Course Content Management**
 - **Models:** Course, Module, Assignment
@@ -274,29 +289,29 @@ The `submissions` table connects students to assignments with a unique constrain
 **Feature Dependencies:**
 
 **Course Catalog & Enrollment depends on User Authentication:**
-- Enrollment requires authenticated user to link student to course
-- Course browsing personalized based on user role and enrolled courses
+- Enrollment requires an authenticated user to link the student to the course
+- Course browsing is personalized based on the user's role and enrolled courses
 - Data flow: User authentication → role verification → enrollment permissions
 
 **Course Content Management depends on User Authentication:**
 - Only authenticated instructors can create/edit courses
-- Course ownership tied to instructor's user_id
-- Authorization checks verify instructor owns course before allowing edits
+- Course ownership tied to the instructor's user_id
+- Authorization checks verify the instructor owns the course before allowing edits
 - Data flow: User login → role check (instructor) → course ownership verification
 
 **Assignment Submission & Grading depends on Course Catalog & Enrollment:**
-- Students can only submit to assignments in enrolled courses
+- Students can only submit assignments in enrolled courses
 - Submission validation checks enrollment status before accepting work
 - Instructors can only grade submissions for courses they teach
 - Data flow: Enrollment record → assignment access → submission creation
 
 **Assignment Submission & Grading depends on Course Content Management:**
-- Assignments must exist (created by instructor) before submissions possible
+- Assignments must exist (created by the instructor) before submissions are possible
 - Assignment attributes (due_date, max_points) drive submission validation and grading
 - Data flow: Assignment creation → student submission → instructor grading
 
 **Administrative Dashboard depends on all other features:**
-- Dashboard displays aggregated data from courses, enrollments, submissions
+- Dashboard displays aggregated data from courses, enrollments, and submissions
 - User management affects authentication across all features
 - Administrative overrides require reading data from all modules
 - Data flow: All feature data → analytics aggregation → dashboard display
