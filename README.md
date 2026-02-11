@@ -107,7 +107,7 @@
 * 0 points: Not addressed.
 
 # Example specification
-Be sure to reference the [example specification](example_specification.md) that was discussed in class. 
+Be sure to reference the [example specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/blob/main/example_specification.md) that was discussed in class. 
 
 # Submitting your specification
 The specification will be developed by the team. We expect everyone on the team to have a major role in the discussion of the specification, the design of the system,
