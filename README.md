@@ -106,5 +106,27 @@
 
 * 0 points: Not addressed.
 
+# Example specification
+Be sure to reference the [example specification](example_specification.md) that was discussed in class. 
 
+# Submitting your specification
+The specification will be developed by the team. We expect everyone on the team to have a major role in the discussion of the specification, the design of the system,
+and the creation of the specification. Our expectations break down into the following:
+- The team will create (in the team's repo) a `docs/` directory at the top level of the repo.  This and future documentation will reside in this directory.
+- The team will create a subdirectory under the `docs/` directory that is named `specification/`. In this directory will be the deliverable for this task/assignment.
+- The team will create a `README.md` file in the `docs/specification/` directory that is the single-file specification of the system.
+- The development of this file will involve all team members. Anyone who does not contribute at all (in the manner described below) will receive a 0 grade for the task/assignment.
+  - Each member will open a branch on this repo and edit the `README.md` file to contribute their work.
+  - Each member will commit their files (with appropriate and professional comments with the commit) and then push the code to the team's repo.
+  - Each member will create their own pull request for the branch they authored and leave a comment in the comments section of the PR tagging all other team members (use the '@' notation)
+  - One other member of the team will review the contributions and either comment on the PR and request changes or approve the PR for merging.
+  - Every member will review and comment on one other member's PR.
+  - Once the PR is approved, each member of the team can merge their own branch.
+If performed correctly, every member of the team will have created a branch, committed changes, created a PR, reviewed and approved someone else's PR, and merged their own code.
+
+Since this single file will be developed somewhat simultaneously, we strongly advise that `git pulls` are repeatedly performed on the `main` branch (sometimes still called `master`). This will keep your local copy up to date with the changes merged by others. However, your branch may lag behind the HEAD of the `main` branch. Thus, you might want to explore the use of the `git stash` and `git rebase` commands. But, it is still likely you might encounter the issue of git merge conflicts. It's something we all go through in cases like this, and you'll want to carefully resolve these conflicts.  Seek help from the course staff if this becomes a challenge for you.
+
+Once the document is "done" (check the Brightspace due date for completeness), you can expect that the course staff will grade your team's work.  Edits after the due date of the document **WILL NOT** be considered as part of the document, so be mindful of the due date and time.
+
+Again, we expect this to be a team effort, and the git repo will show this to us clearly. If you fail to contribute, expect a 0 grade. If you fail to contribute in a _meaningful_ way, expect to receive a poor grade. (That is, if you only add a small amount of text to the document, then your grade will be small.) Outside of these deductions, each member of the team would normally receive the same grade for the task/assignment.
   
