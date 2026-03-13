@@ -106,9 +106,6 @@
 
 * 0 points: Not addressed.
 
-# Example specification
-Be sure to reference the [example specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/blob/main/example_specification.md) that was discussed in class. 
-
 # Submitting your specification
 The specification will be developed by the team. We expect everyone on the team to have a major role in the discussion of the specification, the design of the system,
 and the creation of the specification. Our expectations break down into the following:
@@ -129,4 +126,9 @@ Since this single file will be developed somewhat simultaneously, we strongly ad
 Once the document is "done" (check the Brightspace due date for completeness), you can expect that the course staff will grade your team's work.  Edits after the due date of the document **WILL NOT** be considered as part of the document, so be mindful of the due date and time.
 
 Again, we expect this to be a team effort, and the git repo will show this to us clearly. If you fail to contribute, expect a 0 grade. If you fail to contribute in a _meaningful_ way, expect to receive a poor grade. (That is, if you only add a small amount of text to the document, then your grade will be small.) Outside of these deductions, each member of the team would normally receive the same grade for the task/assignment.
-  
+
+# Example specification
+Be sure to reference the [example specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/blob/main/example_specification.md) that was discussed in class. 
+
+# Grading Rubric
+You can review the [grading rubric here](grading_rubric.md).
