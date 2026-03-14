@@ -88,7 +88,7 @@
 
 * 0 points: Fewer than 2 features defined, or documentation missing entirely
 
-#### **2.5 API Interfaces (max of 3 points)**
+#### 2.5 API Interfaces (max of 3 points)
 
 * 3 points: RESTful endpoints listed for each feature. Endpoints follow conventions (verbs, URIs, parameters). Includes role-based access control.
 
@@ -96,7 +96,7 @@
 
 * 0 points: Not addressed.
 
-### **3.0 Technical Stack (max of 3 points)**
+### 3.0 Technical Stack (max of 3 points)
 
 * 3 points: Language, framework, database, and testing framework are all specified with an optional brief rationale for why they are appropriate.
 
@@ -106,7 +106,7 @@
 
 * 0 points: Not addressed.
 
-# Submitting your specification
+# Submitting your specification (see [rubric](grading_rubric.md))
 The specification will be developed by the team. We expect everyone on the team to have a major role in the discussion of the specification, the design of the system,
 and the creation of the specification. Our expectations break down into the following:
 - The team will create (in the team's repo) a `docs/` directory at the top level of the repo.  This and future documentation will reside in this directory.
