@@ -2,7 +2,7 @@
 
 ### 1.0 Project Overview (max of 3 points)
 
-| Criterion        | Excellent<br>2.1–3.0 points                                                                                                                                                                                   | Satisfactory<br>0.1–1.0 points                                                                                                 | Unsatisfactory<br>0.0 points |
+| Criterion        | Excellent<br>2.1–3.0 points                                                                                                                                                                                   | Satisfactory<br>0.1–2.0 points                                                                                                 | Unsatisfactory<br>0.0 points |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|------------------------------|
 | Project Overview | Provides a clear purpose, description of target users, and scope of the system. Mentions key technical requirements (multi-feature, SaaS, roles, storage, APIs) in context. Reads as a professional overview. | Overview is present but vague or missing either purpose, users, or scope. There is minimal reference to the technical context. | No meaningful overview.      |
 
@@ -10,7 +10,7 @@
 
 #### 2.1 User-Based System (max of 2 points)
 
-| Criterion                            | Excellent<br>1.1–2.0 points                                                                                                                         | Satisfactory<br>0.1–2.0 points                            | Unsatisfactory<br>0.0 points                                           |
+| Criterion                            | Excellent<br>1.1–2.0 points                                                                                                                         | Satisfactory<br>0.1–1.0 points                            | Unsatisfactory<br>0.0 points                                           |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|------------------------------------------------------------------------|
 | Core Requirements: User-Based System | Describes authentication and authorization clearly, including registration, login, and access controls. Shows awareness of security considerations. | Mentions authentication/authorization but without detail. | Missing or unclear about handling of authentication and authorization. |
 
@@ -34,7 +34,7 @@
 
 #### 2.5 API Interfaces (max of 3 points)
 
-| Criterion      | Excellent<br>2.1–3.0 points                                                                                                            | Satisfactory<br>0.1–1.0 points                                                                                            | Unsatisfactory<br>0.0 points |
+| Criterion      | Excellent<br>2.1–3.0 points                                                                                                            | Satisfactory<br>0.1–2.0 points                                                                                            | Unsatisfactory<br>0.0 points |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|------------------------------|
 | API Interfaces | RESTful endpoints listed for each feature. Endpoints follow conventions (verbs, URIs, parameters). Includes role-based access control. | Not all features have endpoints, or endpoints are included but inconsistent, incomplete, or do not follow REST standards. | Not addressed                |
 
