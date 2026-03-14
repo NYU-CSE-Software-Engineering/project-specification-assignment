@@ -1,4 +1,5 @@
-## Team Evaluation Rubric (41 points max)
+## Overall Evaluation Rubric (41 points max)
+This rubric includes 27 points for team evaluation and 14 points for individual evaluation.
 
 ### 1.0 Project Overview (max of 3 points)
 
