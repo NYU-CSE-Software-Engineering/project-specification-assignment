@@ -13,7 +13,7 @@ Refer to [Section 3.0 of the specification](https://github.com/NYU-CSE-Software-
 ### 4.0 Comprehensive Feature List (max of 3 points)
 Refer to [Section 4.0 of the specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/README.md#40-comprehensive-feature-list-max-of-3-points-docsproject_specificationfeature_listmd) for the details.
 
-### 5.0 Individual Evaluation Rubric 12 points max)
+### 5.0 Individual Evaluation Rubric (12 points max)
 
 | Criterion                                                                                                                                                                         | Met requirement<br>2.0 points | Failed to meet requirement<br>0.0 points |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|------------------------------------------|
