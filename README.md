@@ -72,8 +72,8 @@ Describe how your system will address each of the core requirement areas below.
 #### 2.6 Documented RESTful API (max of 2 points)
 
 * **2 points:** Clearly defines a RESTful API architecture (proper HTTP verbs, status codes, resource routing) and includes automatic API documentation generation (e.g., OpenAPI/Swagger).
-* **1 point:** Describes a REST API structure, but omits specifics on HTTP verbs/routing standards, or fails to detail automated documentation tools.
-* **0 points:** API architecture is not RESTful, poorly defined, or lacks documentation plans.
+* **1 point:** Describes a REST API structure, but omits specifics on HTTP verbs/routing standards, or lacks automatic API documentation generation.
+* **0 points:** API architecture is not RESTful, poorly defined, or is non-existent.
 
 ---
 
