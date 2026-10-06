@@ -1,7 +1,5 @@
 # **Example Project Specification: Course Management System**
 
----
-
 **ACADEMIC INTEGRITY NOTICE:**
 This example document was AI-generated and reviewed by the instructor and course staff solely as a formatting and structural template. The technical content may contain errors, inconsistencies, or nonsensical design choices because AI cannot reason about system architecture the way engineers do. **YOUR PROJECT PROPOSAL MUST BE YOUR OWN WORK.** This means:
 
