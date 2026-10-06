@@ -8,10 +8,10 @@
 > - DO NOT trust AI-generated architecture - it frequently produces designs that look plausible but are technically flawed, poorly integrated, or unnecessarily complex
 > - DO use your team's collective engineering judgment to design a system that makes sense for your specific application
 > - DO think critically about the relationships between your features, the structure of your database, and the requirements of your users
-
-AI-generated content is easily identifiable and will be treated as academic dishonesty. We expect thoughtful, team-created designs that demonstrate genuine understanding of web application architecture, not generic templates filled with buzzwords.
-
-Your proposal must reflect original thinking, deliberate design choices, and your team's reasoned approach to solving your application's specific requirements. If you cannot explain and defend every technical decision in your specification, it is not ready for submission.
+> 
+> AI-generated content is easily identifiable and will be treated as academic dishonesty. We expect thoughtful, team-created designs that demonstrate genuine understanding of web application architecture, not generic templates filled with buzzwords.
+> 
+> Your proposal must reflect original thinking, deliberate design choices, and your team's reasoned approach to solving your application's specific requirements. If you cannot explain and defend every technical decision in your specification, it is not ready for submission.
 
 ## Table of Contents (`docs/project_specification/README.md`)
 The links below should link to your various files (subdocuments) and are provided as an example.
