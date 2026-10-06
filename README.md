@@ -95,41 +95,35 @@ Describe how your system will address each of the core requirement areas below.
 ### 3.0 Technical Stack (max of 3 points) [`docs/project_specification/technical_stack.md`]
 
 * 3 points: Language, framework, database, and testing framework are all specified with a brief rationale for why they are appropriate.
-
 * 2 points: Most components listed.
-
 * 1 point: Some components are missing.
-
 * 0 points: Not addressed.
 
 ### 4.0 Comprehensive Feature List (max of 3 points) [`docs/project_specification/feature_list.md`]
-Define the functional features of the system in a structured Markdown table, ensuring each feature explicitly addresses all required metadata fields (Feature Name, Target User Role, Description, and Tier Availability).
+Define the system's functional features in a structured Markdown table, ensuring each feature explicitly addresses all required metadata fields (Feature Name, Target User Role, Description, and Tier Availability).
 
-* 3 points: Outlines at least 6-8 distinct application features using a Markdown table. Every entry explicitly details all required attributes: Feature Name, Target User Role (e.g., Platform Admin, Instructor, Student), Description (clear functional overview), and Tier Availability (e.g., Free, Pro, Enterprise).
-
-* 2 points: Lists 3-5 features in a table, but fails to include one of the required columns (e.g., missing Tier Availability or Target User Role) or descriptions are overly brief.
-
+* 3 points: Outlines at least 6+ (strive to include all) distinct application features using a Markdown table. Every entry explicitly details all required attributes: Feature Name, Target User Role (e.g., Platform Admin, Instructor, Student), Description (clear functional overview), and Tier Availability (e.g., Free, Pro, Enterprise).
+* 2 points: Lists 3-5 features in a table, but fails to include one of the required columns (e.g., missing Tier Availability or Target User Role), or descriptions are overly brief.
 * 1 point: Lists features in plain text or bullet points instead of a Markdown table, or defines fewer than 3 features with missing metadata fields.
-
 * 0 points: Feature list section is omitted entirely.
 
-# Submitting your specification (see [rubric](grading_rubric.md))
-The specification will be developed by the team. We expect everyone on the team to have a major role in the discussion of the specification, the design of the system,
+# Submitting the specification (see [the grading rubric](grading_rubric.md))
+The team will collaboratively develop the specification document. It is expected that all team members have a major (equal) role in the discussion of the specification, the design of the system,
 and the creation of the specification documents. Our expectations break down into the following:
-- The team will create (in the team's repo) a `docs/` directory at the top level of the repo.  This and future documentation will reside in this directory.
-- The team will create a subdirectory under the `docs/` directory that is named `project_specification/`. In this directory will be the deliverable for this task/assignment.
+- The team will create (in the team's repo) a `docs/` directory at the top level of the repo. This and future documentation (for other assignments) will reside in this directory.
+- The team will create a subdirectory under the `docs/` directory that is named `project_specification/`. This directory will contain the deliverable for this task/assignment.
 - The team will create a `README.md` [Markdown file](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in the `docs/project_specification/` directory that is the table of contents for the overall project specification document.
 - The `README.md` page will be a table of contents that lists the major subsections of the document (listed above) with links to each of those subsections. Each subsection is a separate Markdown file as specified above.
-- The development of this file will involve all team members. Anyone who does not contribute at all (in the manner described below) will receive a 0 grade for the task/assignment.
-  - Each member will open a branch on this repo and edit the `README.md` file to contribute their work. Each branch is partially named for the author, using their NYU NetID (e.g., `in-class-assignment-5-<nyu-netid>`)
+- The development of these files is a team effort. Anyone who does not contribute in any fashion (in the manner described below) will receive a 0 grade for the task/assignment.
+  - Each member will open a branch on this repo and edit the `README.md` and other subdocument files to contribute their work. Each branch is partially named for the author, using their NYU NetID (e.g., `in-class-assignment-5-<nyu-netid>`). If necessary, multiple branches are ok, but each should contain the NYU NetID in the name for tracking purposes.
   - Each member will commit their files (with appropriate and professional comments with the commit) and then push the code to the team's repo.
-  - Each member will create their own pull request for the branch they authored and leave a comment in the comments section of the PR tagging all other team members (use the '@' notation)
+  - Each member will create their own pull request for the branch/es they authored and leave a comment in the comments section of the PR tagging all other team members (use the '@' notation)
   - Every member will review and comment on one other member's PR, requesting changes or approving the PR for merging. Multiple team members can be reviewing the branches in this step; we are not implying there is only one reviewer.
-  - Once the PR is approved, each member of the team can merge their _own_ branch.
-  - 
-If performed correctly, every member of the team will have created a branch, committed changes, created a PR, reviewed and approved someone else's PR, and merged their _own_ documents. Merge conflicts should be resolved prior to merging; penalties will result from incorrect merging or the inclusion of [merge conflict markers](https://codersnexus.com/tutorials/github-complete-course/merge-conflicts-causes-and-conflict-markers).
+  - Once the PR is approved, each member of the team should merge their _own_ branch/es.
 
-Since these files will be developed somewhat simultaneously, we strongly advise that `git pulls` are repeatedly performed on the `main` branch. This will keep your local copy up to date with the changes merged by others. However, your branch may lag behind the HEAD of the `main` branch. Thus, you might want to explore the use of the `git stash` and `git rebase` commands. But it is still likely you might encounter the issue of git _merge conflicts_. It's something we all go through in cases like this, and you'll want to carefully resolve these conflicts.  Seek help from the course staff if this becomes a challenge for you. Your prior work in GitKit should have prepared you for this. If you are still struggling, do not wait until the last minutes to resolve these issues and your comprehension thereof.
+If performed correctly, every member of the team will have created a branch (or more), committed changes, created a PR, reviewed and approved someone else's PR, and merged their _own_ documents. Merge conflicts should be resolved before merging; penalties will result from incorrect merging or the inclusion of [merge conflict markers](https://codersnexus.com/tutorials/github-complete-course/merge-conflicts-causes-and-conflict-markers).
+
+Since these files will be developed somewhat simultaneously, we strongly advise that `git pull`s are repeatedly performed on the `main` branch. This will keep your local copy up to date with the changes merged by others. However, your branch may lag behind the HEAD of the `main` branch. Thus, you might want to explore the use of the `git stash` and `git rebase` commands. But it is still likely you might encounter the issue of git _merge conflicts_. It's something we all go through in cases like this, and you'll want to carefully resolve these conflicts.  Seek help from the course staff if this becomes a challenge for you. Your prior work in GitKit should have prepared you for this. If you are still struggling, do not wait until the last hours to resolve these issues and your comprehension thereof.
 
 Once the document is "done" (check Brightspace for the date and time), you can expect that the course staff will grade your team's work.  Edits after the due date of the document **WILL NOT** be considered as part of the document, so be mindful of the due date and time.
 
