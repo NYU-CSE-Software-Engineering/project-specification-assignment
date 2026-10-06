@@ -103,7 +103,7 @@ Describe how your system will address each of the core requirement areas below.
 * 0 points: Not addressed.
 
 ### 4.0 Comprehensive Feature List (max of 3 points) [`docs/project_specification/feature_list.md`]
-Define the functional features of the system in a structured Markdown table, ensuring each feature explicitly addresses all required metadata fields (Feature Name, Target User,  Role, Description, and Tier Availability.
+Define the functional features of the system in a structured Markdown table, ensuring each feature explicitly addresses all required metadata fields (Feature Name, Target User Role, Description, and Tier Availability).
 
 * 3 points: Outlines at least 6-8 distinct application features using a Markdown table. Every entry explicitly details all required attributes: Feature Name, Target User Role (e.g., Platform Admin, Instructor, Student), Description (clear functional overview), and Tier Availability (e.g., Free, Pro, Enterprise).
 
