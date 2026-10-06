@@ -94,13 +94,24 @@ Describe how your system will address each of the core requirement areas below.
   
 ### 3.0 Technical Stack (max of 3 points) [`docs/project_specification/technical_stack.md`]
 
-* 3 points: Language, framework, database, and testing framework are all specified with an optional brief rationale for why they are appropriate.
+* 3 points: Language, framework, database, and testing framework are all specified with a brief rationale for why they are appropriate.
 
 * 2 points: Most components listed.
 
 * 1 point: Some components are missing.
 
 * 0 points: Not addressed.
+
+### 4.0 Comprehensive Feature List (max of 3 points) [`docs/project_specification/feature_list.md`]
+Define the functional features of the system in a structured Markdown table, ensuring each feature explicitly addresses all required metadata fields (Feature Name, Target User,  Role, Description, and Tier Availability.
+
+* 3 points: Outlines at least 6-8 distinct application features using a Markdown table. Every entry explicitly details all required attributes: Feature Name, Target User Role (e.g., Platform Admin, Instructor, Student), Description (clear functional overview), and Tier Availability (e.g., Free, Pro, Enterprise).
+
+* 2 points: Lists 3-5 features in a table, but fails to include one of the required columns (e.g., missing Tier Availability or Target User Role) or descriptions are overly brief.
+
+* 1 point: Lists features in plain text or bullet points instead of a Markdown table, or defines fewer than 3 features with missing metadata fields.
+
+* 0 points: Feature list section is omitted entirely.
 
 # Submitting your specification (see [rubric](grading_rubric.md))
 The specification will be developed by the team. We expect everyone on the team to have a major role in the discussion of the specification, the design of the system,
@@ -116,7 +127,7 @@ and the creation of the specification documents. Our expectations break down int
   - Every member will review and comment on one other member's PR, requesting changes or approving the PR for merging. Multiple team members can be reviewing the branches in this step; we are not implying there is only one reviewer.
   - Once the PR is approved, each member of the team can merge their _own_ branch.
   - 
-If performed correctly, every member of the team will have created a branch, committed changes, created a PR, reviewed and approved someone else's PR, and merged their _own_ documents. Merge conflicts should be resolved prior to merging; penalties will result from incorrect merging or the inclusion of [merge conflict markers](https://codersnexus.com/tutorials/github-complete-course/merge-conflicts-causes-and-conflict-markers) will be penalized.
+If performed correctly, every member of the team will have created a branch, committed changes, created a PR, reviewed and approved someone else's PR, and merged their _own_ documents. Merge conflicts should be resolved prior to merging; penalties will result from incorrect merging or the inclusion of [merge conflict markers](https://codersnexus.com/tutorials/github-complete-course/merge-conflicts-causes-and-conflict-markers).
 
 Since these files will be developed somewhat simultaneously, we strongly advise that `git pulls` are repeatedly performed on the `main` branch. This will keep your local copy up to date with the changes merged by others. However, your branch may lag behind the HEAD of the `main` branch. Thus, you might want to explore the use of the `git stash` and `git rebase` commands. But it is still likely you might encounter the issue of git _merge conflicts_. It's something we all go through in cases like this, and you'll want to carefully resolve these conflicts.  Seek help from the course staff if this becomes a challenge for you. Your prior work in GitKit should have prepared you for this. If you are still struggling, do not wait until the last minutes to resolve these issues and your comprehension thereof.
 
