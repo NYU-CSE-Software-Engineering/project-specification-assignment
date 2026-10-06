@@ -1,102 +1,98 @@
 # **Project Specification Template and Rubric** 
 
-### 1.0 Project Overview (max of 3 points)
+The project should adhere to the previously published core requirements (see Brightspace). These include the following areas (as a reminder).
+|Area|Description|
+|---|---|
+| **Language / Framework** | You will be using Ruby and Rails (aka Ruby on Rails) for your application's back end. I am less concerned with the frontend, though an HTML web interface should be supported. If you have a stretch goal of a mobile interface, you can use whatever you like to implement it, but it should be using your API endpoints to interact with the system. |
+| **Role-Based Access Control (RBAC)** | The system must support at least three distinct user roles with hierarchical permissions: A solid trio would be Platform Admin (full system access), Moderator/Support (can manage user disputes, content, or basic billing but not system settings), and Standard User. Alternatively, you could map roles to the subscription tiers: Admin, Pro User, and Free User, where permissions dictate what features they can access. |
+| **Non-Trivial External API Integration** | The application must consume at least one external API in a meaningful way. The integration must involve complex data processing or two-way communication (e.g., Stripe for payments, Twilio for SMS, SendGrid for transactional emails, or an LLM API). A simple read-only weather or stock ticker widget is insufficient. |
+| **Persistent Data Storage & Migrations** | The application must use a robust relational/SQl database. It must implement a formal schema and use a database migration system (built into Rails) to version-control database changes. |
+| **Modern Authentication & Security** | Secure user registration, login, and session management: Must use industry-standard practices, such as JWT (JSON Web Tokens) with secure HTTP-only cookies, or OAuth 2.0 (SSO via Google, GitHub, etc.). Passwords must be securely hashed (e.g., bcrypt/Argon2) before storage. |
+| **Documented RESTful API** | The backend must be exposed as a cleanly designed REST API (proper HTTP verbs, status codes, and resource routing). The API must be automatically documented using a standard like OpenAPI/Swagger. |
+| **Subscription Tiers & Feature Toggling** | The system should implement at least two service tiers (e.g., "Free" and "Pro"). Programmatically restrict access to certain premium features or usage limits based on the user's or tenant's active tier. (Actual payment processing can be mocked or put in "test mode").|
+| **Usage Tracking or Auditing** | The system should track key user actions or usage metrics, either for billing purposes (e.g., number of API calls made) or security auditing (e.g., an activity log showing who deleted a resource). |
+
+### 1.0 Project Overview (max of 3 points) [`docs/project_specification/project_overview.md`]
 
 * 3 points: Provides a clear purpose, description of target users, and scope of the system. Mentions key technical requirements (multi-feature, SaaS, roles, storage, APIs) in context. Reads as a professional overview.
 
-* 1-2 points Overview is present but vague or missing either purpose, users, or scope. There is minimal reference to the technical context.
+* 1-2 points: Overview is present but vague or missing either purpose, users, or scope. There is minimal reference to the technical context.
 
 * 0 points: No meaningful overview.
 
-### 2.0 Core Requirements (max of 20 points)
+### 2.0 Core Requirements (max of 20 points) [`docs/project_specification/core_requirements.md`]
 
-#### 2.1 User-Based System (max of 2 points)
+Describe how your system will address each of the core requirement areas below.
 
-* 2 points: Describes authentication and authorization clearly, including registration, login, and access controls. Shows awareness of security considerations.
+--- 
 
-* 1 point: Mentions authentication/authorization but without detail.
+#### 2.1 Language / Framework (max of 2 points)
 
-* 0 points: Missing or unclear about handling of authentication and authorization.
+* **2 points:** Clearly outlines the use of Ruby on Rails for the backend, summarizes the planned front-end interface, and explicitly specifies how any additional stretch interfaces (e.g., mobile) consume the Rails API endpoints.
+* **1 point:** Mentions using Ruby on Rails, but details on the front-end interface or API integration for additional clients are vague or incomplete.
+* **0 points:** Fails to specify Ruby on Rails as the backend framework or omits interface architecture details.
 
-#### 2.2 User Roles (max of 3 points)
+---
 
-* 3 points: Defines at least 3 distinct roles, each with specific permissions and restrictions. Roles reflect real use cases of the system.
+#### 2.2 Role-Based Access Control (RBAC) (max of 3 points)
 
-* 2 points: Roles listed, but overlap, lack permissions detail, or feel underdeveloped.
+* **3 points:** Defines at least 3 distinct user roles with clear hierarchical permissions and restrictions (e.g., Admin, Moderator, Standard User) that reflect realistic application use cases.
+* **2 points:** Defines 3 roles, but permissions overlap, lack granular detail, or are underdeveloped.
+* **1 point:** Lists fewer than 3 roles, or roles are only named without describing associated permissions.
+* **0 points:** RBAC design is missing or completely unaddressed.
 
-* 1 point: Roles are only named without a meaningful explanation, or fewer than 3 roles were defined.
+---
 
-* 0 points: Roles missing.
+#### 2.3 Non-Trivial External API Integration (max of 3 points)
 
-#### 2.3 Persistent Storage (max of 6 points)
+* **3 points:** Fully details an integration with a third-party API (e.g., Stripe, Twilio, LLM, etc.) involving complex data processing or two-way communication rather than simple read-only data fetching.
+* **2 points:** Describes an external API integration, but the implementation lacks complexity or two-way data flow.
+* **1 point:** Uses a trivial external API (e.g., basic weather or stock ticker) or lacks detail on how the application processes the external data.
+* **0 points:** No external API integration is proposed.
 
-* 6 points: All criteria met for both Schema Completeness and Schema Justification  
-  * Schema Completeness (max of 3 points)
-    * The database schema must include a minimum of 7 tables.
+---
 
-    * Tables should be logically organized and follow database normalization principles (avoiding redundant data, ensuring appropriate relationships between entities).
+#### 2.4 Persistent Data Storage & Migrations (max of 2 points)
 
-    * Schema design must directly support all functional requirements of the application (each table should serve a clear purpose within the application's feature set).
+* **2 points:** Describes a relational/SQL database schema design and details a clear strategy for version-controlling database changes using Rails migrations.
+* **1 point:** Mentions using a relational database, but details regarding schema design or the migration system are minimal.
+* **0 points:** Missing or unclear about relational database storage and migration strategy.
 
-    * Appropriate use of primary keys, foreign keys, and associations (has\_many, belongs\_to, has\_and\_belongs\_to\_many, etc.).
+---
 
-    * Tables should represent distinct entities or join tables for many-to-many relationships where appropriate.
+#### 2.5 Modern Authentication & Security (max of 3 points)
 
-  * Schema Justification (max of 3 points)  
-    * Provide a written explanation describing how your database schema supports the application's core features and functionality.
+* **3 points:** Proposes industry-standard authentication (e.g., OAuth 2.0 or JWT with secure HTTP-only cookies), outlines secure password hashing (e.g., bcrypt/Argon2), and demonstrates strong security practices.
+* **2 points:** Mentions secure authentication and password hashing, but details on session/token management or security safeguards are incomplete.
+* **1 point:** Uses outdated or insecure authentication methods without proper session management or secure password hashing.
+* **0 points:** Authentication and security mechanisms are missing.
 
-    * Identify which tables and relationships are used to implement each major feature of your application.
+---
 
-    * If your application includes different user roles (e.g., admin, regular user, guest), explain how the schema accommodates these roles and their different permissions or capabilities.
+#### 2.6 Documented RESTful API (max of 2 points)
 
-    * Demonstrate understanding of why specific design choices were made (e.g., why certain tables were separated, why specific associations were chosen, why particular fields were included).
+* **2 points:** Clearly defines a RESTful API architecture (proper HTTP verbs, status codes, resource routing) and includes automatic API documentation generation (e.g., OpenAPI/Swagger).
+* **1 point:** Describes a REST API structure, but omits specifics on HTTP verbs/routing standards, or fails to detail automated documentation tools.
+* **0 points:** API architecture is not RESTful, poorly defined, or lacks documentation plans.
 
-    * Show the connection between user stories or functional requirements and the underlying data model.
+---
 
-* 4-5 points: Schema includes 7+ tables with mostly appropriate relationships; justification present but may lack depth or miss some feature connections
+#### 2.7 Subscription Tiers & Feature Toggling (max of 3 points)
 
-* 2-3 points: Schema has 5-6 tables or has normalization issues; justification is superficial or incomplete
+* **3 points:** Details at least two service tiers (e.g., Free vs. Pro) and provides a clear mechanism for programmatically enforcing feature access, usage limits, or feature toggling based on tier status.
+* **2 points:** Mentions subscription tiers, but the implementation plan for feature restriction or toggling lacks technical detail.
+* **1 point:** Defines tiers conceptually without explaining how restrictions are programmatically enforced within the application.
+* **0 points:** Subscription tiers or feature toggling are omitted entirely.
 
-* 1 point: Schema present but has significant structural problems; minimal or unclear justification
+---
 
-* 0 points: Missing or incoherent schema.
+#### 2.8 Usage Tracking or Auditing (max of 2 points)
 
-#### 2.4 Modular Architecture (max of 6 points)
-
-* 6 points: 3-5 features clearly defined with complete documentation; dependencies fully described and logical  
-  * Feature Definition (max of 3 points): Application functionality is organized into 3-5 distinct major features (feature areas), each clearly named and documented. For each feature, provide:  
-    * A descriptive name that reflects its purpose (e.g., "User Authentication," "Product Catalog," "Order Management").
-
-    * A summary of the feature's core functionality and responsibilities.
-
-    * Clear boundaries identifying which models, views, and controllers belong to this feature area.
-
-    * Brief description of the primary user-facing capabilities this feature provides.
-
-  * Feature Dependencies (max of 3 points): Documentation explicitly describes how features interact with or depend on one another, including:  
-    * Which features rely on data or functionality from other features
-
-    * The nature of these dependencies (e.g., "Order Management depends on User Authentication to identify the customer placing an order").
-
-    * Dependencies are logical and demonstrate thoughtful application architecture.
-
-* 4-5 points: 3-5 features defined, but some documentation gaps; dependencies mentioned but not fully explained
-
-* 2-3 points: Only 2-3 features defined, or feature boundaries unclear; dependencies missing or vague
-
-* 1 point: Minimal attempt at feature organization; no meaningful dependency documentation
-
-* 0 points: Fewer than 2 features defined, or documentation missing entirely
-
-#### 2.5 API Interfaces (max of 3 points)
-
-* 3 points: RESTful endpoints listed for each feature. Endpoints follow conventions (verbs, URIs, parameters). Includes role-based access control.
-
-* 1-2 points: Not all features have endpoints, or endpoints are included but inconsistent, incomplete, or do not follow REST standards.
-
-* 0 points: Not addressed.
-
-### 3.0 Technical Stack (max of 3 points)
+* **2 points:** Clearly outlines a mechanism for logging user actions or tracking usage metrics for security auditing or usage-based billing.
+* **1 point:** Mentions logging or tracking, but lacks specifics on what events are audited or how data is stored/utilized.
+* **0 points:** No plan provided for audit logging or usage tracking.
+  
+### 3.0 Technical Stack (max of 3 points) [`docs/project_specification/technical_stack.md`]
 
 * 3 points: Language, framework, database, and testing framework are all specified with an optional brief rationale for why they are appropriate.
 
@@ -108,22 +104,23 @@
 
 # Submitting your specification (see [rubric](grading_rubric.md))
 The specification will be developed by the team. We expect everyone on the team to have a major role in the discussion of the specification, the design of the system,
-and the creation of the specification. Our expectations break down into the following:
+and the creation of the specification documents. Our expectations break down into the following:
 - The team will create (in the team's repo) a `docs/` directory at the top level of the repo.  This and future documentation will reside in this directory.
-- The team will create a subdirectory under the `docs/` directory that is named `specification/`. In this directory will be the deliverable for this task/assignment.
-- The team will create a `README.md` file in the `docs/specification/` directory that is the single-file specification of the system.
+- The team will create a subdirectory under the `docs/` directory that is named `project_specification/`. In this directory will be the deliverable for this task/assignment.
+- The team will create a `README.md` [Markdown file](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in the `docs/project_specification/` directory that is the table of contents for the overall project specification document.
+- The `README.md` page will be a table of contents that lists the major subsections of the document (listed above) with links to each of those subsections. Each subsection is a separate Markdown file as specified above.
 - The development of this file will involve all team members. Anyone who does not contribute at all (in the manner described below) will receive a 0 grade for the task/assignment.
-  - Each member will open a branch on this repo and edit the `README.md` file to contribute their work.
+  - Each member will open a branch on this repo and edit the `README.md` file to contribute their work. Each branch is partially named for the author, using their NYU NetID (e.g., `in-class-assignment-5-<nyu-netid>`)
   - Each member will commit their files (with appropriate and professional comments with the commit) and then push the code to the team's repo.
   - Each member will create their own pull request for the branch they authored and leave a comment in the comments section of the PR tagging all other team members (use the '@' notation)
-  - One other member of the team will review the contributions and either comment on the PR and request changes or approve the PR for merging.
-  - Every member will review and comment on one other member's PR.
-  - Once the PR is approved, each member of the team can merge their own branch.
-If performed correctly, every member of the team will have created a branch, committed changes, created a PR, reviewed and approved someone else's PR, and merged their own code.
+  - Every member will review and comment on one other member's PR, requesting changes or approving the PR for merging. Multiple team members can be reviewing the branches in this step; we are not implying there is only one reviewer.
+  - Once the PR is approved, each member of the team can merge their _own_ branch.
+  - 
+If performed correctly, every member of the team will have created a branch, committed changes, created a PR, reviewed and approved someone else's PR, and merged their _own_ documents. Merge conflicts should be resolved prior to merging; penalties will result from incorrect merging or the inclusion of [merge conflict markers](https://codersnexus.com/tutorials/github-complete-course/merge-conflicts-causes-and-conflict-markers) will be penalized.
 
-Since this single file will be developed somewhat simultaneously, we strongly advise that `git pulls` are repeatedly performed on the `main` branch (sometimes still called `master`). This will keep your local copy up to date with the changes merged by others. However, your branch may lag behind the HEAD of the `main` branch. Thus, you might want to explore the use of the `git stash` and `git rebase` commands. But, it is still likely you might encounter the issue of git merge conflicts. It's something we all go through in cases like this, and you'll want to carefully resolve these conflicts.  Seek help from the course staff if this becomes a challenge for you.
+Since these files will be developed somewhat simultaneously, we strongly advise that `git pulls` are repeatedly performed on the `main` branch. This will keep your local copy up to date with the changes merged by others. However, your branch may lag behind the HEAD of the `main` branch. Thus, you might want to explore the use of the `git stash` and `git rebase` commands. But it is still likely you might encounter the issue of git _merge conflicts_. It's something we all go through in cases like this, and you'll want to carefully resolve these conflicts.  Seek help from the course staff if this becomes a challenge for you. Your prior work in GitKit should have prepared you for this. If you are still struggling, do not wait until the last minutes to resolve these issues and your comprehension thereof.
 
-Once the document is "done" (check the Brightspace due date for completeness), you can expect that the course staff will grade your team's work.  Edits after the due date of the document **WILL NOT** be considered as part of the document, so be mindful of the due date and time.
+Once the document is "done" (check Brightspace for the date and time), you can expect that the course staff will grade your team's work.  Edits after the due date of the document **WILL NOT** be considered as part of the document, so be mindful of the due date and time.
 
 Again, we expect this to be a team effort, and the git repo will show this to us clearly. If you fail to contribute, expect a 0 grade. If you fail to contribute in a _meaningful_ way, expect to receive a poor grade. (That is, if you only add a small amount of text to the document, then your grade will be small.) Outside of these deductions, each member of the team would normally receive the same grade for the task/assignment.
 
