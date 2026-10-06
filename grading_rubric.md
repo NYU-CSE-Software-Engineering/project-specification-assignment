@@ -1,20 +1,17 @@
-## Overall Evaluation Rubric (39 points max)
-This rubric includes 27 points for team evaluation and 12 points for individual evaluation.
+## Overall Evaluation Rubric (41 points max)
+This rubric includes 29 points for team evaluation and 12 points for individual evaluation.
 
 ### 1.0 Project Overview (max of 3 points)
+Refer to [Section 1.0 of the specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/README.md#10-project-overview-max-of-3-points-docsproject_specificationproject_overviewmd) for the details.
 
-### Part 2.0 Core Requirements (max of 18 points)
-#### 2.1 Language / Framework (max of 2 points)
-#### 2.2 Role-Based Access Control (RBAC) (max of 3 points)
-#### 2.3 Non-Trivial External API Integration (max of 3 points)
-#### 2.4 Persistent Data Storage & Migrations (max of 2 points)
-#### 2.5 API Interfaces (max of 3 points)
-#### 2.6 Documented RESTful API (max of 2 points)
-#### 2.7 Subscription Tiers & Feature Toggling (max of 3 points)
-#### 2.8 Usage Tracking or Auditing (max of 2 points)
+### Part 2.0 Core Requirements (max of 20 points)
+Refer to [Section 2.0 of the specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/README.md#20-core-requirements-max-of-20-points-docsproject_specificationcore_requirementsmd) for the details.
 
 ### 3.0 Technical Stack (max of 3 points) 
+Refer to [Section 3.0 of the specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/README.md#30-technical-stack-max-of-3-points-docsproject_specificationtechnical_stackmd) for the details.
+
 ### 4.0 Comprehensive Feature List (max of 3 points)
+Refer to [Section 4.0 of the specification](https://github.com/NYU-CSE-Software-Engineering/project-specification-assignment/README.md#40-comprehensive-feature-list-max-of-3-points-docsproject_specificationfeature_listmd) for the details.
 
 ### 5.0 Individual Evaluation Rubric 12 points max)
 
