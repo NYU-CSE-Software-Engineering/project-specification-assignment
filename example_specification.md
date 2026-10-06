@@ -14,6 +14,7 @@ AI-generated content is easily identifiable and will be treated as academic dish
 Your proposal must reflect original thinking, deliberate design choices, and your team's reasoned approach to solving your application's specific requirements. If you cannot explain and defend every technical decision in your specification, it is not ready for submission.
 
 ## Table of Contents (`docs/project_specification/README.md`)
+The links below should link to your various files (subdocuments) and are provided as an example.
 
 * [1.0 Project Overview](project_overview.md)
 * [2.0 Core Requirements](core_requirements.md)
@@ -26,6 +27,7 @@ Your proposal must reflect original thinking, deliberate design choices, and you
   * [2.7 Subscription Tiers & Feature Toggling](core_requirements.md#27-subscription-tiers--feature-toggling)
   * [2.8 Usage Tracking or Auditing](core_requirements.md#28-usage-tracking-or-auditing)
 * [3.0 Technical Stack](technical_stack.md)
+* [4.0 Comprehensive Feature List](feature_list.md)
 
 # 1.0 Project Overview 
 **File: [`docs/project_specification/project_overview.md`]**
@@ -132,4 +134,5 @@ Log data structure: Each log entry captures `user_id`, `action`, `auditable_type
 |Interactive Student Progress Dashboard|Student|Provides real-time visual tracking of completed course modules, quiz scores, pending deadlines, and overall grade performance across all active enrollments.|Free, Pro, Enterprise|
 |Interactive Course Builder & Quiz Creator|Instructor / TA|Enables drag-and-drop course module arrangement, video lesson publishing, rich-text assignment creation, and auto-graded multiple-choice quiz setup.|Free (capped at 2 courses), Pro, Enterprise|
 |System-Wide Security & Audit Logging|Platform Admin|Real-time tracking and immutable audit trails of sensitive actions, including role reassignments, grade modifications, SSO events, and external API token usage.|Enterprise|
+|Etc.|You will have many more rows....|
 
