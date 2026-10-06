@@ -20,7 +20,7 @@ The project should adhere to the previously published core requirements (see Bri
 
 * 0 points: No meaningful overview.
 
-### 2.0 Core Requirements (max of 20 points) [`docs/project_specification/core_requirements.md`]
+### 2.0 Core Requirements (max of 18 points) [`docs/project_specification/core_requirements.md`]
 
 Describe how your system will address each of the core requirement areas below.
 
